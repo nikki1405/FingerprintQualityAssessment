@@ -315,47 +315,46 @@ if __name__ == "__main__":
     print("Current Progress : 4 / 5 Quality Metrics")
     print("==========================================")
 
+    # -----------------------------------------
+    # Ridge Clarity
+    # -----------------------------------------
+    ridge_result = check_ridge_clarity(
+        image,
+        roi_result["mask"]
+    )
 
-# -----------------------------------------
-# Ridge Clarity
-# -----------------------------------------
-ridge_result = check_ridge_clarity(
-    image,
-    roi_result["mask"]
-)
+    print("\n[5] Ridge Clarity")
+    print("-------------------------")
+    print(f"Ridge Score : {ridge_result['ridge_score']}")
 
-print("\n[5] Ridge Clarity")
-print("-------------------------")
-print(f"Ridge Score : {ridge_result['ridge_score']}")
+    if ridge_result["ridges_clear"]:
+        print("Status       : ✅ Clear Fingerprint Ridges")
+    else:
+        print("Status       : ❌ Poor Ridge Quality")
 
-if ridge_result["ridges_clear"]:
-    print("Status       : ✅ Clear Fingerprint Ridges")
-else:
-    print("Status       : ❌ Poor Ridge Quality")
+    cv2.imwrite(
+        "outputs/gabor_output.png",
+        ridge_result["filtered"]
+    )
 
-cv2.imwrite(
-    "outputs/gabor_output.png",
-    ridge_result["filtered"]
-)
+    quality_score = calculate_quality_score(
+        blur_result,
+        brightness_result,
+        glare_result,
+        roi_result,
+        ridge_result
+    )
 
-quality_score = calculate_quality_score(
-    blur_result,
-    brightness_result,
-    glare_result,
-    roi_result,
-    ridge_result
-)
+    passed, message = quality_gate(quality_score)
 
-passed, message = quality_gate(quality_score)
+    print("\n==========================================")
+    print(" Composite Quality Assessment")
+    print("==========================================")
+    print(f"Overall Score : {quality_score}/100")
 
-print("\n==========================================")
-print(" Composite Quality Assessment")
-print("==========================================")
-print(f"Overall Score : {quality_score}/100")
+    if passed:
+        print("Result        : ✅ PASS")
+    else:
+        print("Result        : ❌ FAIL")
 
-if passed:
-    print("Result        : ✅ PASS")
-else:
-    print("Result        : ❌ FAIL")
-
-print(f"Message       : {message}")
+    print(f"Message       : {message}")
