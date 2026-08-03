@@ -1,0 +1,22 @@
+Image,Category,Blur Score,Brightness,ROI Fraction,Glare Fraction,Ridge Score,Overall Score,Result,Message
+finger1.png,good,21542.36,160.2,0.3742,0.0,9454.85,90.32,PASS,Excellent Quality - Ready for Matching
+finger2.png,good,5479.51,212.74,0.1691,0.0,6353.54,74.03,PASS,Acceptable Quality - Proceed
+finger3.png,good,13089.99,188.23,0.2819,0.0,10719.2,82.32,PASS,Excellent Quality - Ready for Matching
+finger4.png,good,7624.41,187.78,0.2764,0.0,10043.39,82.17,PASS,Excellent Quality - Ready for Matching
+finger5.png,good,17133.99,185.49,0.3153,0.0,12362.58,84.08,PASS,Excellent Quality - Ready for Matching
+sample.jpg,good,31227.15,176.3,0.3879,0.0,14100.9,88.39,PASS,Excellent Quality - Ready for Matching
+finger1_blur.png,blurry,80.0,160.21,0.4799,0.4655,14351.99,54.9,FAIL,Poor Quality - Please Recapture
+finger2_blur.png,blurry,15.31,212.78,0.2541,0.0,10982.61,52.46,FAIL,Poor Quality - Please Recapture
+finger3_blur.png,blurry,55.66,188.15,0.3917,0.0,15514.08,61.95,PASS,Acceptable Quality - Proceed
+finger4_blur.png,blurry,42.55,187.78,0.4624,0.0,15486.05,64.77,PASS,Acceptable Quality - Proceed
+finger5_blur.png,blurry,25.8,185.49,0.4997,0.0,15834.62,66.53,PASS,Acceptable Quality - Proceed
+finger1_dark.png,dark,3143.45,75.11,0.4078,0.0,14556.41,78.57,PASS,Acceptable Quality - Proceed
+finger2_dark.png,dark,1731.65,83.88,0.1965,0.0,8849.97,64.39,PASS,Acceptable Quality - Proceed
+finger3_dark.png,dark,2277.97,77.59,0.3012,0.0,12759.75,70.35,PASS,Acceptable Quality - Proceed
+finger4_dark.png,dark,2595.93,77.18,0.3165,0.0,12734.14,72.49,PASS,Acceptable Quality - Proceed
+finger5_dark.png,dark,2880.72,73.04,0.3373,0.0,11778.67,74.11,PASS,Acceptable Quality - Proceed
+finger1_glare.png,glare,20316.48,163.57,0.3726,0.0,10574.81,89.74,PASS,Excellent Quality - Ready for Matching
+finger2_glare.png,glare,4771.02,216.24,0.1659,0.0,7621.32,72.22,PASS,Acceptable Quality - Proceed
+finger3_glare.png,glare,12044.83,191.67,0.2809,0.0,10999.31,81.75,PASS,Excellent Quality - Ready for Matching
+finger4_glare.png,glare,7243.39,190.04,0.2737,0.0,10673.08,81.71,PASS,Excellent Quality - Ready for Matching
+finger5_glare.png,glare,16063.37,188.21,0.3129,0.0,12459.99,83.56,PASS,Excellent Quality - Ready for Matching
